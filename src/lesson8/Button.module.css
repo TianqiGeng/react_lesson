@@ -1,0 +1,7 @@
+.button{
+    color:red
+}
+/*全局*/
+:global(.button){
+    color:green
+}
