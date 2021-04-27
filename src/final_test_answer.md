@@ -9,7 +9,7 @@
 6. A
 7. ACD
 8. ABCD
-9. ABC
+9. AC
 10. ABCD
 
 ## 判断题
