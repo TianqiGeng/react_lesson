@@ -22,10 +22,10 @@ function getNextId() {
  * @return {Array} 新的items
  */
 
-export function addToList(items, data) {
+export function addToList(items, item) {
     let newItem = Object.assign({
         id: getNextId()
-    }, data)
+    }, item)
     return [...items, newItem]
 }
 
