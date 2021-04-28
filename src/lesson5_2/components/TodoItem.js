@@ -6,7 +6,7 @@ class TodoItem extends React.Component {
         //checkbox
         const { data, changeStatus } = this.props
         const handleChange = (checked) => changeStatus(data.id, checked)
-
+        console.log("data=" + data.text);
         return (
             <div className="ui-state-default">
                 <div className="checkout">
@@ -16,8 +16,7 @@ class TodoItem extends React.Component {
 
                 </div>
 
-                {/* {mm.text} */}
-                {/* {kk} */}
+
             </div>
         )
     }

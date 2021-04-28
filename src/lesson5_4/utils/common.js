@@ -6,10 +6,11 @@ import React from 'react'
  * @param {JS对象} props
  * @returns React元素
  */
-//把子元素所有内容复制给props
+
 export function wrapChildWith(children, props) {
     return React.Children.map(children, child => React.cloneElement(child, props))
 }
+
 /**
  * 把函数名称和函数对象映射起来
  * @param {Object} object 原始的this上下文
@@ -23,4 +24,9 @@ export function objectWithOnly(object, attrs) {
         newObject[attr] = object[attr].bind(object)
     })
     return newObject
+}
+
+//筛选出包含的str
+export function stringIncludes(str, substr) {
+    return str.indexOf(substr) !== -1
 }

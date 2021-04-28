@@ -7,9 +7,7 @@ import { applyFilter } from './services/filter'
 class TodoList extends React.Component {
 
     render() {
-        //const { title, items, addNew, filter, changeFilter, changeStatus, deleteItem } = this.props
-        const { title, items, filter } = this.props.data
-        const { addNew, changeFilter, changeStatus } = this.props.actions
+        const { title, items, addNew, filter, changeFilter, changeStatus, deleteItem } = this.props
         const filtedList = applyFilter(items, filter)
         return (
             <div className="todolist">
@@ -23,7 +21,7 @@ class TodoList extends React.Component {
                             key={item.id}
                             data={item}
                             changeStatus={changeStatus}
-
+                            deleteItem={deleteItem}
                         />)}
                 </ul>
                 <Footer {...{ count: items.length, filter, changeFilter }} />

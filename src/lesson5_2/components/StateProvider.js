@@ -1,6 +1,6 @@
 import React from 'react'
-import { getAll, addToList, updateStatus } from './services/todo'
-import { wrapChildWith, objectWithOnly } from './utils.js/common'
+import { getAll, addToList, updateStatus } from '../services/todo'
+import { wrapChildWith, objectWithOnly } from '../utils.js/common'
 class Provider extends React.Component {
     constructor(props) {
         super()
@@ -15,8 +15,9 @@ class Provider extends React.Component {
 
         let item = addToList(this.state.items, { text, completed: false })
         this.setState({
-            items: [...this.state.items, item]
+            items: item
         })
+        console.log(this.state.items)
     }
     changeFilter(filter) {
         this.setState(

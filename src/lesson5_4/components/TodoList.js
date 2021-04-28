@@ -1,22 +1,19 @@
 import React from 'react'
 import TodoItem from "./TodoItem"
 import Footer from './Footer'
-import AddTodo from './AddTodo'
-import { applyFilter } from './services/filter'
+import { applyFilter, search } from '../services/filter'
+import Header from './Header'
 
 class TodoList extends React.Component {
 
     render() {
         //const { title, items, addNew, filter, changeFilter, changeStatus, deleteItem } = this.props
-        const { title, items, filter } = this.props.data
-        const { addNew, changeFilter, changeStatus } = this.props.actions
-        const filtedList = applyFilter(items, filter)
+        const { title, items, filter, mode, query } = this.props.data
+        const { addNew, changeFilter, changeStatus, setSearchQuery, changeMode, addCounter } = this.props.actions
+        const filtedList = search(applyFilter(items, filter), query)
         return (
             <div className="todolist">
-                <header>
-                    <h1>{title}</h1>
-                    <AddTodo addNew={addNew} />
-                </header>
+                <Header {...{ title, mode, addNew, query, setSearchQuery }} />
                 <ul className="list-unstyled">
                     {filtedList.map(item =>
                         <TodoItem
@@ -26,7 +23,7 @@ class TodoList extends React.Component {
 
                         />)}
                 </ul>
-                <Footer {...{ count: items.length, filter, changeFilter }} />
+                <Footer {...{ count: items.length, filter, changeFilter, changeMode, addCounter }} />
             </div>
         )
     }

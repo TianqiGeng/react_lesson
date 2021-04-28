@@ -2,7 +2,7 @@ import React from 'react'
 import TodoItem from "./TodoItem"
 import Footer from './Footer'
 import AddTodo from './AddTodo'
-import { applyFilter } from './services/filter'
+import { applyFilter } from '../services/filter'
 
 class TodoList extends React.Component {
 
