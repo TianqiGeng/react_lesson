@@ -46,3 +46,12 @@ colorlist
 2. app.js 添加colors
 3. 添加remove,通过id把colors列表里面数据变少
 4. app.js里面添加rate (主要是starList里面onRate点击后rating变化往上传导致星星变化)
+### lesson7
+HOC(不懂)+HOOK（1：10）
+设置订阅或请求数据
+这一节hook类容少
+### lesson8
+全局样式 行内样式
+Css Modules模块化(重点)
+svg处理
+使用hook重构colorlistDemo(1:10)

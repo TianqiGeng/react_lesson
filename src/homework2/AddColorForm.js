@@ -2,7 +2,7 @@ import React from 'react'
 
 import styled from "styled-components"
 import { UserInput } from './InputHook'
-import styles from "../styles/App.module.css"
+import styles from "./styles/App.module.css"
 //继承并显示新的Button
 const Button = styled.button`
     background-color:transparent;

@@ -15,11 +15,17 @@ import './lesson4_1_2/assets/style/index.css';
 // import App from './lesson6/App';
 // import App from './lesson6_1/App';
 // import './lesson6_1/App.css';
-import App from './lesson6_2/App';
-import './lesson6_2/App.css';
+// import App from './lesson6_2/App';
+// import './lesson6_2/App.css';
+// import App from './lesson7/App';
 // import App from './lesson8/App';
-//import App from './lesson8/colorListDemo/App';
-// import App from './homework4/App';
+// import App from './lesson8/colorListDemo/App';
+// import App from './lesson8/hooks/App';
+//homework
+// import App from './homework1/App';
+// import App from './homework2/App';
+// import App from './homework3/App';
+import App from './homework4/App';
 
 
 ReactDOM.render(
